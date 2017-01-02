@@ -1,6 +1,6 @@
 FROM php:latest
 RUN apt-get update && \
-    apt-get install -y unzip && \
+    apt-get install -y unzip \
     sqlite3 libsqlite3-dev
     docker-php-ext-install -j$(nproc) zip sqlite3 pdo_sqlite
 RUN apt-get update && apt-get -y install git
